@@ -1,0 +1,21 @@
+{
+  "name": "binding-doub",
+  "authors": [
+    "Victor Tang <victortang1992@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.4.0"
+  }
+}

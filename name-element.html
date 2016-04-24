@@ -1,0 +1,31 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="two-way-binding-polymer">
+    <template>
+        <h2>Two-way binding!</h2>
+        <div>
+           <label for="firstNameInput">Whose element is this?</label>
+           <input id="firstNameInput" type="text" value="{{firstname::input}}" />
+           <input type="text" value="{{lastname::input}}" />
+        </div>
+        <span>This is <span>{{firstname}}</span> <span>{{lastname}}</span>'s custom element!</span>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "two-way-binding-polymer",
+        properties: {
+            firstname: {
+                type: String,
+                notify: true,
+                value: "Sander" // optional
+            },
+            lastname: {
+                type: String,
+                notify: true,
+                value: "Rossel" // optional
+            }
+        }
+    });
+</script>
