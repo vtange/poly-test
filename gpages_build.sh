@@ -16,7 +16,7 @@
 
 # usage gp Polymer core-item [branch]
 # Run in a clean directory passing in a GitHub org and repo name
-org=$1
+gituser=$1
 repo=$2
 name=$3
 email=$4
@@ -43,10 +43,10 @@ echo "{
 }
 " > .bowerrc
 bower install
-bower install $org/$repo#$branch
-#git checkout ${branch} -- demo
-#rm -rf components/$repo/demo
-#mv demo components/$repo/
+bower install $gituser/$repo#$branch
+cd components/$repo
+mv "index.html" components/
+cd ../..
 
 # redirect by default to the component folder
 echo "<META http-equiv="refresh" content=\"0;URL=components/$repo/\">" >index.html
