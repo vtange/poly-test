@@ -44,9 +44,6 @@ echo "{
 " > .bowerrc
 bower install
 bower install $gituser/$repo#$branch
-cd components/$repo
-mv "index.html" ../../components
-cd ../..
 
 # redirect by default to the component folder
 echo "<META http-equiv="refresh" content=\"0;URL=components/$repo/\">" >index.html
