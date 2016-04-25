@@ -16,6 +16,9 @@ git checkout --orphan gh-pages
 # remove all content
 git rm -rf -q .
 
+# merge master branch
+git merge master
+
 # run gulpFile
 gulp
 
