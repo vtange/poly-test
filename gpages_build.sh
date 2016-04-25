@@ -45,7 +45,7 @@ echo "{
 bower install
 bower install $gituser/$repo#$branch
 cd components/$repo
-mv "index.html" components/
+mv "index.html" ../../components
 cd ../..
 
 # redirect by default to the component folder
