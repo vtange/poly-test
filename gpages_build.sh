@@ -45,7 +45,7 @@ echo "{
 bower install
 bower install $gituser/$repo#$branch
 
-# 
+# make sure /demo/index.html exists
 git checkout ${branch} -- demo
 rm -rf components/$repo/demo
 mv demo components/$repo/
