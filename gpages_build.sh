@@ -19,6 +19,9 @@ git rm -rf -q .
 # merge master branch
 git merge master
 
+# install components n' Polymer
+bower install
+
 # run gulpFile
 gulp
 

@@ -3,4 +3,4 @@ node_js: stable
 script:
   - bash ./gpages_build.sh vtange poly-test Victor victortang1992@gmail.com
 before_script:
-- npm install gulp gulp-vulcanize gulp-crisper
+- npm install bower gulp gulp-vulcanize gulp-crisper
