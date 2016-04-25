@@ -16,11 +16,12 @@ mkdir $repo
 git clone "https://${GH_TOKEN}@${GH_REF}" --single-branch
 
 # switch to gh-pages branch
-cd $repo
-git checkout gh-pages
+pushd $repo >/dev/null
+git checkout --orphan gh-pages
 
 # merge master branch
 git merge master
+npm install bower gulp gulp-vulcanize gulp-crisper
 
 # use bower to install runtime deployment
 bower cache clean $repo # ensure we're getting the latest from the desired branch.
