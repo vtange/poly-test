@@ -19,8 +19,15 @@ git rm -rf -q .
 # merge master branch
 git merge master
 
-# install components n' Polymer
+# use bower to install runtime deployment
+bower cache clean $repo # ensure we're getting the latest from the desired branch.
+git show ${branch}:bower.json > bower.json
+echo "{
+  \"directory\": \"components\"
+}
+" > .bowerrc
 bower install
+bower install $org/$repo#$branch
 
 # run gulpFile
 gulp
