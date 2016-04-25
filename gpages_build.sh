@@ -35,7 +35,7 @@ git checkout --orphan gh-pages
 # remove all content
 git rm -rf -q .
 
-# use bower to install runtime deployment
+# get back bower.json, install the stuff required inside, install the new element itself
 bower cache clean $repo # ensure we're getting the latest from the desired branch.
 git show ${branch}:bower.json > bower.json
 echo "{
@@ -45,7 +45,12 @@ echo "{
 bower install
 bower install $gituser/$repo#$branch
 
-# redirect by default to the component folder
+# 
+git checkout ${branch} -- demo
+rm -rf components/$repo/demo
+mv demo components/$repo/
+
+# redirect base html file to the new component
 echo "<META http-equiv="refresh" content=\"0;URL=components/$repo/\">" >index.html
 
 git config user.name $name
