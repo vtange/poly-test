@@ -16,11 +16,8 @@ mkdir $repo
 git clone "https://${GH_TOKEN}@${GH_REF}" --single-branch
 
 # switch to gh-pages branch
-pushd $repo >/dev/null
-git checkout --orphan gh-pages
-
-# remove all content
-git rm -rf -q .
+cd $repo
+git checkout gh-pages
 
 # merge master branch
 git merge master
