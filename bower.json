@@ -1,22 +1,26 @@
 {
-  "name": "poly-test",
+  "name": "new-element",
+  "version": "1.0.0",
   "authors": [
     "Victor Tang <victortang1992@gmail.com>"
   ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
-  "ignore": [
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+  "description": "nothing",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
   ],
-  "homepage": "",
-  "private": true,
+  "main": "new-element.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/vtange/new-element/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~1.4.0"
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

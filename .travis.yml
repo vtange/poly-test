@@ -1,7 +1,7 @@
 language: node_js
 node_js: stable
 script:
-  - bash ./gpages_build.sh vtange poly-test "Victor Tang" "victortang1992@gmail.com"
+  - bash ./gpages_build.sh vtange new-element Victor Tang victortang1992@gmail.com
 before_script:
 - npm install bower
 - export PATH=$PWD/node_modules/.bin:$PATH
