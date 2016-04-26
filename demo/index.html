@@ -12,23 +12,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>new-element Demo</title>
+    <title>poly-test Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../new-element.html">
+    <link rel="import" href="../poly-test.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;new-element&gt;</code>&#58;</p>
+    <p>An example of <code>&lt;poly-test&gt;</code>&#58;</p>
 
     <button>Say Something</button>
 
-    <new-element author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
-      <h2>Hello new-element</h2>
-    </new-element>
+    <poly-test author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
+      <h2>Hello poly-test</h2>
+    </poly-test>
 
     <script>
       document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('new-element').sayHello('Hallo!'));
+        alert(document.querySelector('poly-test').sayHello('Hallo!'));
       });
     </script>
 

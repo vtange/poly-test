@@ -1,4 +1,4 @@
-# new-element
+# poly-test
 
 An element providing a starting point for your own reusable Polymer elements.
 
@@ -28,13 +28,13 @@ And you can run it via:
     polyserve
 
 Once running, you can preview your element at
-`http://localhost:8080/components/new-element/`, where `new-element` is the name of the directory containing it.
+`http://localhost:8080/components/poly-test/`, where `poly-test` is the name of the directory containing it.
 
 
 ## Testing Your Element
 
 Simply navigate to the `/test` directory of your element to run its tests. If
-you are using Polyserve: `http://localhost:8080/components/new-element/test/`
+you are using Polyserve: `http://localhost:8080/components/poly-test/test/`
 
 ### web-component-tester
 

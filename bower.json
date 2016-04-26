@@ -1,19 +1,19 @@
 {
-  "name": "new-element",
+  "name": "poly-test",
   "version": "1.0.0",
   "authors": [
     "Victor Tang <victortang1992@gmail.com>"
   ],
-  "description": "nothing",
+  "description": "2 way binding",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
     "seed"
   ],
-  "main": "new-element.html",
+  "main": "poly-test.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/vtange/new-element/",
+  "homepage": "https://github.com/vtange/poly-test/",
   "ignore": [
     "/.*",
     "/test/",
