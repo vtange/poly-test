@@ -87,7 +87,7 @@ Example:
        * Additionally, Send a XHR POST Request to a URL. 
        * Use if hitting X does more than just remove something from sight, such as removing it from the backend database.
        *
-       * @type {{url: string, data: object}}
+       * @type {{url: string, data: string}}
        */
       backend: {
         type: Object,
@@ -146,7 +146,6 @@ Example:
 		if(this.backend){
 			////PREPARE DATA AND SEND
 			var formData = new FormData();
-
 			//// HTML file input, chosen by user
 			formData.append("data", this.backend.data);
 
