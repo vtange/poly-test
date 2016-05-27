@@ -12,25 +12,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>poly-test Demo</title>
+    <title>x-box Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../poly-test.html">
+    <link rel="import" href="../x-box.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;poly-test&gt;</code>&#58;</p>
-
-    <button>Say Something</button>
-
-    <poly-test author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
-      <h2>Hello poly-test</h2>
-    </poly-test>
-
-    <script>
-      document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('poly-test').sayHello('Hallo!'));
-      });
-    </script>
-
+    <p>Examples of using <code>&lt;x-box&gt;</code>&#58;</p>
+	<style>
+		/* override default */
+		x-box {
+			position: relative;
+			margin-bottom: 2rem;
+		}  
+	</style>
+    <x-box>
+			<h1>How to Win</h1>
+			<section>
+			<b>Rules</b>
+			<br>
+			1. Do this.
+			<br>
+			2. Do that.
+			</section>
+    </x-box>
+    <x-box>
+			<div>
+				<h2>GOOG</h2>
+			</div>
+			<div>
+				<div>
+					<img src="http://www.programmableweb.com/wp-content/candlestick-chart.png"/>
+				</div>
+				<div>
+					<br>
+					Day's Range:	720.28 - 728.33
+					<br>
+					52wk Range:	515.18 - 789.87
+					<br>
+					Volume:	1,576,286
+					<br>
+					Avg Vol (3m):	1,860,810
+					<br>
+					Market Cap:	497.15B
+				</div>
+			</div>
+    </x-box>
+	  
+	  
   </body>
 </html>

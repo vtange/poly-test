@@ -1,19 +1,19 @@
 {
-  "name": "poly-test",
+  "name": "x-box",
   "version": "1.0.0",
   "authors": [
     "Victor Tang <victortang1992@gmail.com>"
   ],
-  "description": "2 way binding",
+  "description": "Modal box window with X for closing/etc.",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
     "seed"
   ],
-  "main": "poly-test.html",
+  "main": "x-box.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/vtange/poly-test/",
+  "homepage": "https://github.com/vtange/x-box/",
   "ignore": [
     "/.*",
     "/test/",
