@@ -84,10 +84,26 @@ Example:
       blockClicks: Boolean,
 
       /**
-       * `xDoes` : Provide a function to be fired when the X is clicked (such as AJAX), aside from closing the window element.
+       * Additionally, Send a XHR POST Request to a URL. 
+       * Use if hitting X does more than just remove something from sight, such as removing it from the backend database.
+       *
+       * @type {{url: string, data: object}}
        */
-	  xDoes: Function	
-	
+      backend: {
+        type: Object,
+        // Use `value` to provides a default value for a property, by setting it
+        // on your element's prototype.
+        //
+        // If you provide a function, as we do here, Polymer will call that
+        // _per element instance_.
+        //
+        // We do that to ensure that each element gets its own copy of the
+        // value, rather than having it shared across all instances (via the
+        // prototype).
+        value: function() {
+          return null;
+        }
+	  }
 
     },
 
@@ -127,9 +143,37 @@ Example:
      * Closes the window element. (Sets display to none.)
      */
     closeWindow: function(e) {
-		if(this.properties.xDoes)
-			this.properties.xDoes();
-		this.style.display = "none";
+		if(this.backend){
+			////PREPARE DATA AND SEND
+			var formData = new FormData();
+
+			//// HTML file input, chosen by user
+			formData.append("data", this.backend.data);
+
+			//// create request
+			var request = new XMLHttpRequest();
+			request.open("POST", this.backend.url);
+
+			//// setup request
+			//enable upload progress
+			request.upload.onprogress = function(e) {
+				if (e.lengthComputable) {
+				var percentage = (e.loaded / e.total) * 100;
+				}
+			};
+			request.onerror = function(e) {
+				closeErr('An error occurred while submitting the form. Maybe your file is too big');
+			};
+			request.onload = function(e) {
+				this.style.display = "none";
+			};
+
+			//send request
+			request.send(formData);
+		}
+		else{
+			this.style.display = "none";
+		}
     }
 
   });
