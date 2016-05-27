@@ -64,7 +64,7 @@ Example:
 	<template if="{{blockClicks}}">  
 		<div class="click-blocker"></div>
 	</template>
-    <a class="boxclose" on-tap="close"></a>
+    <a class="boxclose" on-tap="closeWindow"></a>
     <content></content>
   </template>
 
@@ -79,14 +79,20 @@ Example:
     properties: {
 
       /**
-       * `blockClicks` indicates that the element should include a fixed, full-screen div element that prevents clicking outside the window
+       * `blockClicks` indicates that the element should include a fixed, full-screen div element that prevents clicking outside the window.
        */
-      blockClicks: Boolean
+      blockClicks: Boolean,
+
+      /**
+       * `xDoes` : Provide a function to be fired when the X is clicked (such as AJAX), aside from closing the window element.
+       */
+	  xDoes: Function	
+	
 
     },
 
     listeners: {
-        'close': 'closeWindow'
+        'closeWindow': 'closeWindow'
     },
     // Element Lifecycle
 
@@ -121,6 +127,8 @@ Example:
      * Closes the window element. (Sets display to none.)
      */
     closeWindow: function(e) {
+		if(this.properties.xDoes)
+			this.properties.xDoes();
 		this.style.display = "none";
     }
 
