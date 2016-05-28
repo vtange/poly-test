@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>x-box Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../x-box.html">
+  </head>
+  <body>
+
+    <p>Examples of using <code>&lt;x-box&gt;</code>&#58;</p>
+	<style>
+		/* override default */
+		x-box {
+			position: relative;
+			margin-bottom: 2rem;
+		}  
+	</style>
+    <x-box>
+			<h1>How to Win</h1>
+			<section>
+			<b>Rules</b>
+			<br>
+			1. Do this.
+			<br>
+			2. Do that.
+			</section>
+    </x-box>
+    <x-box backend='{"url":"/","data":"GOOG"}'>
+			<div>
+				<h2>GOOG</h2>
+			</div>
+			<div>
+				<div>
+					<img src="http://www.programmableweb.com/wp-content/candlestick-chart.png"/>
+				</div>
+				<div>
+					<br>
+					Day's Range:	720.28 - 728.33
+					<br>
+					52wk Range:	515.18 - 789.87
+					<br>
+					Volume:	1,576,286
+					<br>
+					Avg Vol (3m):	1,860,810
+					<br>
+					Market Cap:	497.15B
+				</div>
+			</div>
+    </x-box>
+	  
+	  
+  </body>
+</html>

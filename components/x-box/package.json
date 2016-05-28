@@ -1,0 +1,26 @@
+{
+  "name": "x-box",
+  "version": "1.0.0",
+  "description": "Modal box window with X for closing/etc.",
+  "main": "gulpFile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtange/x-box.git"
+  },
+  "author": "Victor Tang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtange/x-box/issues"
+  },
+  "homepage": "https://github.com/vtange/x-box#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-vulcanize": "^6.1.0"
+  }
+}
