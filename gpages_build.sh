@@ -45,6 +45,8 @@ echo "{
 bower install
 bower install $gituser/$repo#$branch
 
+
+
 # make sure /demo/index.html exists
 git checkout ${branch} -- demo
 rm -rf components/$repo/demo
@@ -53,6 +55,12 @@ mv demo components/$repo/
 # redirect base html file to the new component
 echo "<META http-equiv="refresh" content=\"0;URL=components/$repo/\">" >index.html
 
+# gulp vulcanize and crisper the demo for optimized loading
+cd components/$repo/
+gulp
+cd ../..
+
+# prepare user info for gh-pages push
 git config user.name $name
 git config user.email $email
 
